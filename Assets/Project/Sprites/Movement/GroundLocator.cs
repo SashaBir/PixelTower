@@ -12,12 +12,18 @@ namespace PixelTower.Movement
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
+            if (collision.transform.position.y < transform.position.y)
+                return;
+
             if (collision.gameObject.layer == _groundLayerId)
                 IsGround = true;
         }
 
         private void OnCollisionExit2D(Collision2D collision)
         {
+            if (collision.transform.position.y < transform.position.y)
+                return;
+
             if (collision.gameObject.layer == _groundLayerId)
                 IsGround = false;
         }
