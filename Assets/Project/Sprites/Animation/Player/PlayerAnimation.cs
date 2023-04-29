@@ -22,14 +22,26 @@ namespace PixelTower.Animation
             if (_rigidbody.velocity.x != 0)
                 _renderer.flipX = _rigidbody.velocity.x <= 0;
 
-            if (_groundLocator.IsGround == false && _rigidbody.velocity.y > 0) 
+            if (_groundLocator.IsGround == false && _rigidbody.velocity.y > 0)
+            {
                 _animator.SetBool(_jumping, true);
+                _animator.SetBool(_falling, false);
+                _animator.SetBool(_running, false);
+            }
 
             if (_groundLocator.IsGround == false && _rigidbody.velocity.y < 0)
+            {
+                _animator.SetBool(_jumping, false);
                 _animator.SetBool(_falling, true);
+                _animator.SetBool(_running, false);
+            }
 
             if (_groundLocator.IsGround == true && _rigidbody.velocity.x != 0)
-                _animator.SetBool(_running, _rigidbody.velocity != Vector2.zero);
+            {
+                _animator.SetBool(_jumping, false);
+                _animator.SetBool(_falling, false);
+                _animator.SetBool(_running, true);
+            }
         }
     }
 }
