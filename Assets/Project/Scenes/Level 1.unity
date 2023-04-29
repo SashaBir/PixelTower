@@ -11028,7 +11028,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1849774267}
-  - component: {fileID: 1849774272}
+  - component: {fileID: 1849774274}
   - component: {fileID: 1849774268}
   - component: {fileID: 1849774270}
   - component: {fileID: 1849774271}
@@ -11113,8 +11113,24 @@ MonoBehaviour:
   _rigidbody: {fileID: 1849774268}
   _speed: 6
   _jumpHeight: 4
---- !u!60 &1849774272
-PolygonCollider2D:
+--- !u!114 &1849774273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849774266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ca18aed6e92f74e87841773954a695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 1849774268}
+  _groundLocator: {fileID: 1849774270}
+  _animator: {fileID: 1477394340}
+  _renderer: {fileID: 1477394339}
+--- !u!61 &1849774274
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11145,7 +11161,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.16216373, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11155,37 +11171,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.20291328, y: 0.5449821}
-      - {x: -0.1674366, y: 0.037515342}
-      - {x: -0.7358456, y: -0.016874224}
-      - {x: -0.73653316, y: -0.52375394}
-      - {x: -0.2767763, y: -0.5242305}
-      - {x: -0.108172834, y: -0.5446148}
-      - {x: 0.47710478, y: -0.53231686}
-      - {x: 0.44553852, y: -0.32033283}
-      - {x: 0.7554283, y: -0.35089132}
-      - {x: 0.74053097, y: -0.12377095}
-      - {x: 0.48120975, y: -0.1282407}
-      - {x: 0.49603748, y: 0.5119305}
-  m_UseDelaunayMesh: 0
---- !u!114 &1849774273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1849774266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ca18aed6e92f74e87841773954a695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 1849774268}
-  _groundLocator: {fileID: 1849774270}
-  _animator: {fileID: 1477394340}
-  _renderer: {fileID: 1477394339}
+  serializedVersion: 2
+  m_Size: {x: 0.67567253, y: 1}
+  m_EdgeRadius: 0
 --- !u!4 &2025230855 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5500662852093339691, guid: a64e4f157a3ce9045ab098f10dcaf4a0, type: 3}
