@@ -1,5 +1,5 @@
 {
-    "name": "Invaders",
+    "name": "PixelTower",
     "maps": [
         {
             "name": "Player",
@@ -385,6 +385,17 @@
                     "name": "",
                     "id": "1d669ee4-57ef-4e23-94de-3a3f502143c6",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5b07a7ab-69b1-4d28-8a03-5fe4824ab295",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
