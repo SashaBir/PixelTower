@@ -6,26 +6,19 @@ namespace PixelTower.Movement
     [RequireComponent(typeof(Rigidbody2D))]
     public class GroundLocator : MonoBehaviour
     {
+        [SerializeField] private float _lenght;
         [SerializeField][Min(0)] private int _groundLayerId;
 
         public bool IsGround { get; private set; }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void Update()
         {
-            if (collision.transform.position.y < transform.position.y)
-                return;
-
-            if (collision.gameObject.layer == _groundLayerId)
-                IsGround = true;
+            IsGround = Physics2D.Raycast(transform.position, Vector2.down, _lenght, 1 << _groundLayerId);
         }
 
-        private void OnCollisionExit2D(Collision2D collision)
+        private void OnDrawGizmos()
         {
-            if (collision.transform.position.y < transform.position.y)
-                return;
-
-            if (collision.gameObject.layer == _groundLayerId)
-                IsGround = false;
+            Gizmos.DrawRay(new Ray(transform.position, Vector2.down * _lenght));
         }
     }
 }
