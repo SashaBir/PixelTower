@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 4151712998390842311}
   - component: {fileID: 1630910963428638405}
   - component: {fileID: 4082746337701795850}
+  - component: {fileID: 5324132366645152025}
   m_Layer: 8
   m_Name: Table
   m_TagString: Untagged
@@ -109,7 +110,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6124515265516729535}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.209, y: 0.317, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -202,3 +203,17 @@ PolygonCollider2D:
       - {x: 1.0025172, y: 0.165021}
       - {x: 1.0064268, y: 0.40499252}
   m_UseDelaunayMesh: 0
+--- !u!114 &5324132366645152025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6124515265516729535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434e6e3d54feb314d85648c65d4205d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 1630910963428638405}
+  _health: 3

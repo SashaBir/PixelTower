@@ -1,4 +1,5 @@
-﻿using PixelTower.Input;
+﻿using PixelTower.Addition;
+using PixelTower.Input;
 using UnityEngine;
 
 namespace PixelTower.Movement
@@ -12,6 +13,12 @@ namespace PixelTower.Movement
 
         private InputSystem _input;
         private float _direction = 0;
+
+        public Vector2 LookedDirection { get; private set; } = Vector2.zero;
+
+        public Vector2 Velocity => _rigidbody.velocity;
+
+        public bool IsOnGround => _locator.IsGround;
 
         private void Awake()
         {
@@ -38,6 +45,9 @@ namespace PixelTower.Movement
 
         private void FixedUpdate()
         {
+            if (_rigidbody.velocity != Vector2.zero)
+                LookedDirection = _rigidbody.velocity.x > 0 ? Vector2.right : Vector2.left;
+
             _rigidbody.velocity = new Vector2
             {
                 x = _direction * _speed,
@@ -58,11 +68,7 @@ namespace PixelTower.Movement
 
         private void Jump()
         {
-            float g = -Physics2D.gravity.y;
-            float h = _jumpHeight;
-            float gs = _rigidbody.gravityScale;
-
-            float force = Mathf.Sqrt(2 * (g * h * gs));
+            float force = PhysicsExpansion.CalculateForceNoMass(_jumpHeight, _rigidbody.gravityScale);
 
             _rigidbody.velocity = new Vector2
             {

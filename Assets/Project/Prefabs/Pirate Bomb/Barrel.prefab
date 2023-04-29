@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5500662852093339691}
   - component: {fileID: 7085567504558295373}
   - component: {fileID: 5475738561373326183}
+  - component: {fileID: 5324410849251945816}
   m_Layer: 8
   m_Name: Barrel
   m_TagString: Untagged
@@ -114,6 +115,20 @@ PolygonCollider2D:
       - {x: 0.37110674, y: -0.17945722}
       - {x: 0.3624773, y: 0.15772009}
   m_UseDelaunayMesh: 0
+--- !u!114 &5324410849251945816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2821731434259722309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434e6e3d54feb314d85648c65d4205d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 7085567504558295373}
+  _health: 3
 --- !u!1 &8748995148508738292
 GameObject:
   m_ObjectHideFlags: 0
