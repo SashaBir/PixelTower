@@ -25,7 +25,7 @@ namespace PixelTower.Weapon
 
         private IEnumerator Attack()
         {
-            //yield return new WaitForSeconds(Random.Range(3, 5f));
+            yield return new WaitForSeconds(Random.Range(3, 5f));
 
             var delay = new WaitForSeconds(_delay);
             do

@@ -36,7 +36,7 @@ namespace PixelTower.Weapon
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawRay(new Ray(transform.position, _movement.LookedDirection * _detectedDistance));
+            Gizmos.DrawCube((Vector2)transform.position + _movement.LookedDirection, Vector2.one);
         }
 
         private void OnAttack(UnityEngine.InputSystem.InputAction.CallbackContext obj)
@@ -52,8 +52,10 @@ namespace PixelTower.Weapon
 
         protected override void Attack()
         {
+            base.Attack();
+
             var direction = _movement.LookedDirection;
-            var hits = Physics2D.RaycastAll(transform.position, direction, _detectedDistance);
+            var hits = Physics2D.OverlapBoxAll((Vector2)transform.position + direction, Vector2.one, 0);
             if (hits.Length == 0)
                 return;
 
@@ -69,8 +71,6 @@ namespace PixelTower.Weapon
                 if (hit.transform.TryGetComponent(out IDamageable damageable) == true)
                     damageable.Damage(_damage);
             }
-
-            base.Attack();
         }
 
         private void CountDelay()
