@@ -45,8 +45,8 @@ namespace PixelTower.Movement
 
         private void FixedUpdate()
         {
-            if (_rigidbody.velocity != Vector2.zero)
-                LookedDirection = _rigidbody.velocity.x > 0 ? Vector2.right : Vector2.left;
+            if (_rigidbody.velocity.x != 0)
+                LookedDirection = _rigidbody.velocity.x >= 0 ? Vector2.right : Vector2.left;
 
             _rigidbody.velocity = new Vector2
             {
