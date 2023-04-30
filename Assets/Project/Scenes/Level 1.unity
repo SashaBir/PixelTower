@@ -11709,10 +11709,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5324132366645152025, guid: 1d709fe6a18377a458d8d70883b33509, type: 3}
-      propertyPath: _health
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 6124515265516729535, guid: 1d709fe6a18377a458d8d70883b33509, type: 3}
       propertyPath: m_Name
       value: Table
@@ -11777,10 +11773,6 @@ PrefabInstance:
     - target: {fileID: 7738959643526541168, guid: 43876b1859a35154c8af776ad22e037e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9008996490903095560, guid: 43876b1859a35154c8af776ad22e037e, type: 3}
-      propertyPath: _health
-      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11863,10 +11855,6 @@ PrefabInstance:
     - target: {fileID: 2821731434259722309, guid: a64e4f157a3ce9045ab098f10dcaf4a0, type: 3}
       propertyPath: m_Name
       value: Barrel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5324410849251945816, guid: a64e4f157a3ce9045ab098f10dcaf4a0, type: 3}
-      propertyPath: _health
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5500662852093339691, guid: a64e4f157a3ce9045ab098f10dcaf4a0, type: 3}
       propertyPath: m_RootOrder

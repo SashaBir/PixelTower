@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PixelTower.Weapon
 {
-    public class Canon : MonoBehaviour
+    public class Cannon : MonoBehaviour
     {
         [Header("Attcking")]
         [SerializeField] private Rigidbody2D _projectile;
